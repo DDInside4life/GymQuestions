@@ -7,13 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\GymQuestions.Application\GymQuestions.Application.csproj" />
       <ProjectReference Include="..\GymQuestions.Contracts\GymQuestions.Contracts.csproj" />
       <ProjectReference Include="..\GymQuestions.Domain\GymQuestions.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.9" />
+      <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
     </ItemGroup>
 
 </Project>
