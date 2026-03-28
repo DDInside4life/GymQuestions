@@ -1,20 +1,30 @@
-
+using GymQuestions.Application.Questions;
 using GymQuestions.Contracts;
+using GymQuestions.Contracts.Questions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GymQuestions.Presenters;
+namespace GymQuestions.Presenters.Questions;
 
 [ApiController]
 [Route("[controller]")]
 public class QuestionsController : ControllerBase
 {
+   private readonly IQuestionsService _questionsService;
+
+   public QuestionsController(IQuestionsService questionsService)
+   {
+      _questionsService = questionsService;
+   }
+   
+   
    [HttpPost]
    // IActionResult - гарантирует возврат результата
    public async Task<IActionResult> Create(
       [FromBody] CreateQuestionDto request, 
       CancellationToken cancellationToken)
    {
-      return Ok("Questions created"); // OK() - возвращает код 200 и какой-либо результат 
+      var questionId = await _questionsService.Create(request, cancellationToken);
+      return Ok(questionId); // OK() - возвращает код 200 и какой-либо результат 
    }
 
    [HttpGet]

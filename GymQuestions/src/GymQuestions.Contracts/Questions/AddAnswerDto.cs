@@ -1,3 +1,3 @@
-namespace GymQuestions.Contracts;
+namespace GymQuestions.Contracts.Questions;
 
 public record AddAnswerDto(Guid UserId, string Text);

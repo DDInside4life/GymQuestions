@@ -1,3 +1,3 @@
-namespace GymQuestions.Contracts;
+namespace GymQuestions.Contracts.Questions;
 
 public record UpdateQuestionDto(string Title, string Body, Guid[] TagIds);

@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\GymQuestions.Application\GymQuestions.Application.csproj" />
       <ProjectReference Include="..\GymQuestions.Domain\GymQuestions.Domain.csproj" />
       <ProjectReference Include="..\GymQuestions.Presenters\GymQuestions.Presenters.csproj" />
     </ItemGroup>
